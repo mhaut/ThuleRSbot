@@ -1,0 +1,344 @@
+Classification:
+    Supervised:
+        KNN:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_neighbors:
+                    value: 5
+                    type: int
+                    maxValue: 9999999
+                    minValue: 0
+        MLR:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_jobs:
+                    value: -1
+                    type: int
+                    maxValue: 20
+                    minValue: -2
+                C:
+                    value: 1.0
+                    type: float
+                    maxValue: 9999999
+                    minValue: 0
+        RF:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_jobs:
+                    value: -1
+                    type: int
+                    maxValue: 20
+                    minValue: -2
+                n_estimators:
+                    value: 10
+                    type: int
+                    maxValue: 999999
+                    minValue: 0
+                max_depth:
+                    value: 10
+                    type: int
+                    maxValue: 999999
+                    minValue: 0
+                min_samples_split:
+                    value: 2
+                    type: int
+                    maxValue: 999999
+                    minValue: 0
+                max_features:
+                    value: 10
+                    type: int
+                    maxValue: 999999
+                    minValue: 0
+        SVM:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                device:
+                    value: 'CPU'
+                    type: str
+                    listValues: ['CPU', 'GPU0']
+                kernel:
+                    value: 'rbf'
+                    type: str
+                    listValues: ['rbf', 'linear', 'poly', 'sigmoid']
+                C:
+                    value: 1.0
+                    type: float
+                    maxValue: 9999999
+                    minValue: 0
+                gamma:
+                    value: 0.5
+                    type: float
+                    maxValue: 9999999
+                    minValue: -9999999
+        LDA:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_components:
+                    value: 1
+                    type: int
+                    maxValue: 50
+                    minValue: 1
+        MLP:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                device:
+                    value: 'CPU'
+                    type: str
+                    listValues: ['CPU', 'GPU0']
+                optimizer:
+                    value: 'Adam'
+                    type: str
+                    listValues: ['Adam', 'SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adamax', 'Nadam']
+                epochs:
+                    value: 100
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+                batch_size:
+                    value: 20
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+        CNN1D:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                device:
+                    value: 'CPU'
+                    type: str
+                    listValues: ['CPU', 'GPU0']
+                optimizer:
+                    value: 'Adam'
+                    type: str
+                    listValues: ['Adam', 'SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adamax', 'Nadam']
+                epochs:
+                    value: 10
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+                batch_size:
+                    value: 100
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+        CNN2D:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                device:
+                    value: 'CPU'
+                    type: str
+                    listValues: ['CPU', 'GPU0']
+                optimizer:
+                    value: 'Adam'
+                    type: str
+                    listValues: ['Adam', 'SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adamax', 'Nadam']
+                epochs:
+                    value: 10
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+                batch_size:
+                    value: 100
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+        CNN_RGB:
+            info:
+                AllowedDatasetType: ['RGB']
+                singleOrMultipleImage: multiple
+            parameters:
+                epochs:
+                    value: 25
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+                batch_size:
+                    value: 100
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+    Unsupervised:
+        KMeans:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_clusters:
+                    value: 2
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+        SC:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_jobs:
+                   value: -1
+                   type: int
+                   maxValue: 20
+                   minValue: -2
+                n_clusters:
+                   value: 2
+                   type: int
+                   maxValue: 9999
+                   minValue: 1
+    Semisupervised:
+        
+DimensionalityReduction:
+    Supervised:
+    Unsupervised:
+        PCA:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_components:
+                    value: 1
+                    type: int
+                    maxValue: 50
+                    minValue: 1
+        FastICA:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_components:
+                    value: 1
+                    type: int
+                    maxValue: 50
+                    minValue: 1
+        NMF:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_components:
+                    value: 1
+                    type: int
+                    maxValue: 50
+                    minValue: 1
+    Semisupervised:
+
+Unmixing:
+    Supervised:
+        FCLSU:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                delta:
+                   value: 0.0001
+                   type: float
+                   maxValue: 9999999.0
+                   minValue: -9999999.0
+        LSU:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                delta:
+                   value: 0.0001
+                   type: float
+                   maxValue: 9999999.0
+                   minValue: -9999999.0
+    Unsupervised:
+        LDA:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_jobs:
+                   value: -1
+                   type: int
+                   maxValue: 20
+                   minValue: -2
+                n_endmembers:
+                   value: 3
+                   type: int
+                   maxValue: 9999
+                   minValue: 1
+        VCA:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_endmembers:
+                   value: 3
+                   type: int
+                   maxValue: 9999
+                   minValue: 1
+        PLSA:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral']
+                singleOrMultipleImage: single
+            parameters:
+                n_endmembers:
+                    value: 3
+                    type: int
+                    maxValue: 9999
+                    minValue: 1
+                device:
+                    value: 'CPU'
+                    type: str
+                    listValues: ['CPU', 'GPU0']
+                max_iter:
+                   value: 5
+                   type: int
+                   maxValue: 9999
+                   minValue: 1
+    Semisupervised:
+
+Restoration:
+    Supervised:
+    Unsupervised:
+        Pansharpening:
+            info:
+                AllowedDatasetType: ['Hyperspectral', 'Multispectral', 'RGB']
+                singleOrMultipleImage: single
+            parameters:
+                typeSR:
+                    value: 'bicubic'
+                    type: str
+                    listValues: ['bicubic', 'nearest', 'lanczos4']
+                scale:
+                   value: 2
+                   type: float
+                   maxValue: 9999999.0
+                   minValue: 0.0000001
+    Semisupervised:
+
+ChangeDetection:
+    Supervised:
+        Vegetation:
+            info:
+                AllowedDatasetType: ['Multispectral']
+                singleOrMultipleImage: multiple
+            parameters:
+    Unsupervised:
+        Humedity:
+            info:
+                AllowedDatasetType: ['Multispectral']
+                singleOrMultipleImage: multiple
+            parameters:
+        Chlorophyll:
+            info:
+                AllowedDatasetType: ['Multispectral']
+                singleOrMultipleImage: multiple
+            parameters:
+    Semisupervised:

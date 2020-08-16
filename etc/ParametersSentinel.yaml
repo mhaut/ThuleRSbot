@@ -1,0 +1,47 @@
+upperLeftCornerLongitude:
+    value: 46.16
+    type: float
+    maxValue: 180.0
+    minValue: -180.0
+upperLeftCornerLatitude:
+    value: -16.15
+    type: float
+    maxValue: 180.0
+    minValue: -180.0
+lowerRightCornerLongitude:
+    value: 46.51
+    type: float
+    maxValue: 180.0
+    minValue: -180.0
+lowerRightCornerLatitude:
+    value: -15.58
+    type: float
+    maxValue: 180.0
+    minValue: -180.0
+satellite:
+    value: 'S2-L1C'
+    type: str
+    listValues: ['S2-L1C', 'LANDSAT8-L1C']  
+time_interval_init:
+    value: '2017-12-14'
+    type: str
+    listValues: ['aaaa-mm-dd']
+time_interval_end:
+    value: '2017-12-15'
+    type: str
+    listValues: ['aaaa-mm-dd']
+ResolutionX_Meters:
+    value: 80
+    type: int
+    maxValue: 1000
+    minValue: 1
+ResolutionY_Meters:
+    value: 80
+    type: int
+    maxValue: 1000
+    minValue: 1
+maximumAllowedCloudCover:
+    value: 0.8
+    type: float
+    maxValue: 1.0
+    minValue: 0.0

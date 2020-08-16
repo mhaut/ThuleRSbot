@@ -1,0 +1,26 @@
+name: ThuleRSbot
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy
+  - pip
+  - python=3.6.9
+  - scipy
+  - scikit-learn=0.21.3
+  - thundersvm
+  - keras
+  - pip:
+    - colormap
+    - easydev
+    - eo-learn
+    - geopandas
+    - numba
+    - opencv-python
+    - sentinelhub
+    - tifffile
+    - tweepy
+    - pytelegrambotapi
+    - python-telegram-bot
+    - pyyaml
+

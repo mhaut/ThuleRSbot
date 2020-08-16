@@ -1,0 +1,17 @@
+{
+    "Bot": {
+        "parallelOrQueueExecutionAlg": "parallel" 
+    },
+    "Telegram": {
+        "API_TOKEN": "Insert Token",
+        "num_Threads": 8
+    },
+    "SentinelHub": {
+        "API_TOKEN": "Insert Token"
+    },
+    "Email": {
+        "from_addrs": "Insert Address",
+        "password": "Insert Password",
+        "subject": "Insert Subject"
+    }
+}

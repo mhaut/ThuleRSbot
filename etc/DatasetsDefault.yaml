@@ -1,0 +1,142 @@
+Classification:
+    Hyperspectral:
+        single:
+            extensions: [mat]
+            upload: datasets/HSI-datasets/Classification/
+            dataset: indian_pines_corrected.mat
+            trainPercent: 
+                value: 0.15
+                type: float
+                maxValue: 1.0
+                minValue: 0.0
+            preprocesing:
+                value: 'std'
+                type: str
+                listValues: ['std', 'minmax', 'None']
+        multiple:
+    Multispectral:
+        single:
+            extensions: [mat, tif]
+            upload: datasets/Multispectral/
+            dataset: Berlin_s1.tif
+            trainPercent: 
+                value: 0.15
+                type: float
+                maxValue: 1.0
+                minValue: 0.0
+            preprocesing:
+                value: 'std'
+                type: str
+                listValues: ['std', 'minmax', 'None']
+        multiple:
+    RGB:
+        single:
+            extensions: [tif, png, jpg, jpeg]
+            upload: datasets/RGB/
+            dataset: agricultural00.tif
+            trainPercent: 
+                value: 0.15
+                type: float
+                maxValue: 1.0
+                minValue: 0.0
+        multiple:
+            extensions: [tif, png, jpg, jpeg]
+            upload: datasets/RGB/
+            dataset: Unmerced/
+            trainPercent: 
+                value: 0.15
+                type: float
+                maxValue: 1.0
+                minValue: 0.0
+
+DimensionalityReduction:
+    Hyperspectral:
+        single:
+            extensions: [mat]
+            upload: datasets/HSI-datasets/Classification/
+            dataset: indian_pines_corrected.mat
+            trainPercent: 
+                value: 0.15
+                type: float
+                maxValue: 1.0
+                minValue: 0.0
+            preprocesing:
+                value: 'std'
+                type: str
+                listValues: ['std', 'minmax', 'None']
+        multiple:
+    Multispectral:
+        single:
+            extensions: [mat, tif]
+            upload: datasets/Multispectral/
+            dataset: Berlin_s1.tif
+            trainPercent: 
+                value: 0.15
+                type: float
+                maxValue: 1.0
+                minValue: 0.0
+            preprocesing:
+                value: 'std'
+                type: str
+                listValues: ['std', 'minmax', 'None']
+        multiple:
+    RGB:
+        single:
+            extensions: [tif, png, jpg, jpeg]
+            upload: datasets/RGB/
+            dataset: agricultural00.tif
+            trainPercent: 
+                value: 0.15
+                type: float
+                maxValue: 1.0
+                minValue: 0.0
+        multiple:  
+
+Unmixing:
+    Hyperspectral:
+        single:
+            extensions: [mat]
+            upload: datasets/HSI-datasets/Unmixing/
+            dataset: Samson.mat
+        multiple:
+    Multispectral:
+        single:
+            extensions: [mat, tif]
+            upload: datasets/Multispectral/
+            dataset: Berlin_s1.tif
+        multiple:
+        
+Restoration:
+    Hyperspectral:
+        single:
+            extensions: [mat]
+            upload: datasets/HSI-datasets/Classification/
+            dataset: indian_pines_corrected.mat
+        multiple:
+    Multispectral:
+        single:
+            extensions: [mat, tif]
+            upload: datasets/Multispectral/
+            dataset: Berlin_s1.tif
+        multiple:
+    RGB:
+        single:
+            extensions: [tif, png, jpg, jpeg]
+            upload: datasets/RGB/
+            dataset: agricultural00.tif
+        multiple:
+
+ChangeDetection:
+    Hyperspectral:
+        single:
+        multiple:
+    Multispectral:
+        single:
+        multiple:
+            extensions: [mat]
+            upload: datasets/ChangeDetection/
+            dataset: Meandro2019EneroAgosto/
+    RGB:
+        single:
+        multiple:
+            

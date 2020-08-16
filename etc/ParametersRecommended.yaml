@@ -1,0 +1,69 @@
+indian_pines_corrected.mat:
+    Classification:
+        Supervised:
+            MLR:
+                C: 1
+            RF:
+                n_estimators: 200
+                max_depth:  10
+                min_samples_split: 3
+                max_features: 10
+            SVM:
+                C: 100
+                gamma: 0.00390625
+
+paviaU.mat:
+    Classification:
+        Supervised:
+            MLR:
+                C: 10
+            RF:
+                n_estimators: 200
+                max_depth:  60
+                min_samples_split: 2
+                max_features: 40
+            SVM:
+                C: 100
+                gamma: 0.03125
+                
+salinas_corrected.mat:
+    Classification:
+        Supervised:
+            MLR:
+                C: 10
+            RF:
+                n_estimators: 200
+                max_depth:  10
+                min_samples_split: 2
+                max_features: 10
+            SVM:
+                C: 1000
+                gamma: 0.25
+                
+houston.mat:
+    Classification:
+        Supervised:
+            MLR:
+                C: 83
+            RF:
+                n_estimators: 200
+                max_depth:  20
+                min_samples_split: 2
+                max_features: 8
+            SVM:
+                C: 100000
+                gamma: 0.03125
+
+paviaC.mat:
+    Classification:
+        Supervised:
+            MLR:
+                C: 10
+            RF:
+                n_estimators: 200
+                max_depth:  60
+                min_samples_split: 2
+                max_features: 40
+            SVM:
+                C: 1000
+                gamma: 2
